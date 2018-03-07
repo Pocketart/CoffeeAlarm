@@ -6,7 +6,8 @@ void setup() {
 }
 
 void loop() {
-  tone(buzzerPin, 700);
+  tone(buzzerPin, 300, 1000); // (pinNum, frequency, duration_milisec)
+  // tone duration is independent from program. runs on internal clock
   delay(1500);
   noTone(buzzerPin);
   delay(3000);
