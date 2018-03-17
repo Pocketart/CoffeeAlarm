@@ -1,16 +1,13 @@
-int buzzerPin= 9;
-
+int buzzerSwitch = 33;
 
 void setup() {
-  pinMode(buzzerPin, OUTPUT);
+  pinMode(buzzerSwitch, OUTPUT);
+  digitalWrite(buzzerSwitch, LOW);
 }
 
 void loop() {
-  tone(buzzerPin, 300, 1000); // (pinNum, frequency, duration_milisec)
-  // tone duration is independent from program. runs on internal clock
-  // noTone is probably better
-  delay(1500);
-  noTone(buzzerPin);
-  delay(3000);
- 
+  digitalWrite(buzzerSwitch, HIGH);
+  delay(100);
+  digitalWrite(buzzerSwitch, LOW);
+  delay(250);
 }
